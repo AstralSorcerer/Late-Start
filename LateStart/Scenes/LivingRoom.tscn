@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bnrrv0i4gjjxr" path="res://Assets/LivingRoom/CouchUnlit.png" id="1_tsr7a"]
 [ext_resource type="Texture2D" uid="uid://bfdriaqy7nwgp" path="res://Assets/LivingRoom/Anvil.png" id="2_vfqy0"]
+[ext_resource type="Script" path="res://Scripts/TextBox.gd" id="3_2b4hx"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="3_7an4d"]
-[ext_resource type="Script" path="res://Scripts/Disappear.gd" id="4_3sb8h"]
 [ext_resource type="Texture2D" uid="uid://b01mt8vjiyl2w" path="res://Assets/LivingRoom/LivingRoomBackdrop.png" id="5_jntp4"]
 [ext_resource type="Texture2D" uid="uid://cyjuasjp32lnx" path="res://Assets/LivingRoom/ScissorsUnlit.png" id="7_v5e5w"]
 [ext_resource type="Texture2D" uid="uid://ctmtjv6jbybm7" path="res://Assets/LivingRoom/ScissorsLit.png" id="8_7byfp"]
@@ -28,12 +28,14 @@ position = Vector2(531, 376)
 texture = ExtResource("2_vfqy0")
 
 [node name="TextBox" type="Panel" parent="."]
-modulate = Color(1, 1, 1, 0)
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+z_index = 10
 offset_left = -4.0
 offset_top = 497.0
 offset_right = 1168.0
 offset_bottom = 665.0
-script = ExtResource("4_3sb8h")
+script = ExtResource("3_2b4hx")
 
 [node name="Label" type="Label" parent="TextBox"]
 layout_mode = 0
@@ -41,7 +43,6 @@ offset_top = 4.0
 offset_right = 1164.0
 offset_bottom = 154.0
 theme_override_font_sizes/font_size = 40
-text = "You found a wrench"
 horizontal_alignment = 1
 vertical_alignment = 1
 
