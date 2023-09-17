@@ -1,85 +1,46 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1js12d12q4f5"]
+[gd_scene load_steps=16 format=3 uid="uid://b1js12d12q4f5"]
 
 [ext_resource type="Texture2D" uid="uid://bnrrv0i4gjjxr" path="res://Assets/LivingRoom/CouchUnlit.png" id="1_tsr7a"]
 [ext_resource type="Texture2D" uid="uid://bfdriaqy7nwgp" path="res://Assets/LivingRoom/Anvil.png" id="2_vfqy0"]
-[ext_resource type="Script" path="res://Scripts/TextBox.gd" id="3_2b4hx"]
-[ext_resource type="Script" path="res://Scripts/Buttons.gd" id="3_7an4d"]
+[ext_resource type="Script" path="res://Scripts/Anvil.gd" id="3_b2u5p"]
+[ext_resource type="Script" path="res://Scripts/UI/item_button.gd" id="5_efxk0"]
 [ext_resource type="Texture2D" uid="uid://b01mt8vjiyl2w" path="res://Assets/LivingRoom/LivingRoomBackdrop.png" id="5_jntp4"]
+[ext_resource type="Texture2D" uid="uid://c5lgb1fv1rk7d" path="res://Assets/LivingRoom/CouchLit.png" id="6_i08s8"]
 [ext_resource type="Texture2D" uid="uid://cyjuasjp32lnx" path="res://Assets/LivingRoom/ScissorsUnlit.png" id="7_v5e5w"]
 [ext_resource type="Texture2D" uid="uid://ctmtjv6jbybm7" path="res://Assets/LivingRoom/ScissorsLit.png" id="8_7byfp"]
 [ext_resource type="Texture2D" uid="uid://gtn11sy3skgl" path="res://Assets/LivingRoom/DrawerUnlit.png" id="8_aollx"]
 [ext_resource type="Texture2D" uid="uid://d3tsiubqrkatp" path="res://Assets/LivingRoom/DrawerLit.png" id="9_1noxi"]
+[ext_resource type="Script" path="res://Scripts/UI/inventory_item.gd" id="10_ja3bv"]
 [ext_resource type="Texture2D" uid="uid://denb1ct452tsj" path="res://Assets/LivingRoom/BroomHeadUnlit.png" id="10_jndd5"]
 [ext_resource type="Texture2D" uid="uid://d3t1t307xk3af" path="res://Assets/LivingRoom/BroomHeadLit.png" id="11_80wtj"]
 [ext_resource type="Texture2D" uid="uid://cj2r24bcbo3ik" path="res://Assets/LivingRoom/RopeUnlit.png" id="12_v1edo"]
 [ext_resource type="Texture2D" uid="uid://cflgyg7ltxt2s" path="res://Assets/LivingRoom/RopeLit.png" id="13_0o2g7"]
 
-[node name="LivingRoom" type="Node2D"]
+[node name="LivingRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Couch" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1030, 516)
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("1_tsr7a")
-
-[node name="Anvil" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(531, 376)
-texture = ExtResource("2_vfqy0")
-
-[node name="TextBox" type="Panel" parent="."]
-visible = false
-self_modulate = Color(0, 0, 0, 1)
-z_index = 10
-offset_left = -4.0
-offset_top = 497.0
-offset_right = 1168.0
-offset_bottom = 665.0
-script = ExtResource("3_2b4hx")
-
-[node name="Label" type="Label" parent="TextBox"]
-layout_mode = 0
-offset_top = 4.0
-offset_right = 1164.0
-offset_bottom = 154.0
-theme_override_font_sizes/font_size = 40
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LivingRoomBackdrop" type="Sprite2D" parent="."]
+[node name="LivingRoomBackdrop" type="TextureRect" parent="."]
 z_index = -100
-position = Vector2(576.5, 327.5)
+layout_mode = 1
+offset_right = 1440.0
+offset_bottom = 900.0
 scale = Vector2(0.804861, 0.721111)
+mouse_filter = 2
 texture = ExtResource("5_jntp4")
 
-[node name="Scissors" type="TextureButton" parent="."]
-offset_left = 1019.0
-offset_top = 468.0
-offset_right = 1122.0
-offset_bottom = 591.0
-texture_normal = ExtResource("7_v5e5w")
-texture_hover = ExtResource("8_7byfp")
-script = ExtResource("3_7an4d")
-
-[node name="Drawer" type="TextureButton" parent="."]
-offset_left = 218.0
-offset_top = 367.0
-offset_right = 276.0
-offset_bottom = 564.0
-scale = Vector2(0.88, 0.600002)
-texture_normal = ExtResource("8_aollx")
-texture_hover = ExtResource("9_1noxi")
-
-[node name="BroomHead" type="TextureButton" parent="."]
-offset_left = 818.0
-offset_top = 390.0
-offset_right = 947.0
-offset_bottom = 528.0
-scale = Vector2(0.839995, 0.84)
-texture_normal = ExtResource("10_jndd5")
-texture_hover = ExtResource("11_80wtj")
+[node name="Anvil" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 424.0
+offset_top = 56.0
+offset_right = 667.0
+offset_bottom = 252.0
+texture = ExtResource("2_vfqy0")
+script = ExtResource("3_b2u5p")
 
 [node name="Rope" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 483.0
 offset_top = -32.0
 offset_right = 1260.0
@@ -89,5 +50,51 @@ disabled = true
 texture_normal = ExtResource("12_v1edo")
 texture_hover = ExtResource("13_0o2g7")
 texture_disabled = ExtResource("12_v1edo")
+script = ExtResource("5_efxk0")
+required = &"scissors"
 
-[connection signal="pressed" from="Scissors" to="Scissors" method="Scissors"]
+[node name="Couch" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 892.0
+offset_top = 376.0
+offset_right = 1264.0
+offset_bottom = 748.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("1_tsr7a")
+texture_hover = ExtResource("6_i08s8")
+
+[node name="Scissors" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 464.0
+offset_right = 1127.0
+offset_bottom = 587.0
+texture_normal = ExtResource("7_v5e5w")
+texture_hover = ExtResource("8_7byfp")
+script = ExtResource("10_ja3bv")
+id = &"scissors"
+
+[node name="Drawer" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 367.0
+offset_right = 276.0
+offset_bottom = 564.0
+scale = Vector2(0.88, 0.600002)
+texture_normal = ExtResource("8_aollx")
+texture_hover = ExtResource("9_1noxi")
+
+[node name="BroomHead" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 818.0
+offset_top = 390.0
+offset_right = 947.0
+offset_bottom = 528.0
+scale = Vector2(0.839995, 0.84)
+texture_normal = ExtResource("10_jndd5")
+texture_hover = ExtResource("11_80wtj")
+script = ExtResource("10_ja3bv")
+id = &"broom head"
+
+[connection signal="pressed" from="Rope" to="Anvil" method="_on_rope_cut"]
