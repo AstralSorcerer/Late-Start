@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dax2a87cxrspf"]
+[gd_scene load_steps=22 format=3 uid="uid://dax2a87cxrspf"]
 
 [ext_resource type="Texture2D" uid="uid://bn6ttsnekboju" path="res://Assets/Kitchen/GreenFoodUnlit.png" id="1_loiv2"]
 [ext_resource type="Texture2D" uid="uid://cuy667ngv7c6f" path="res://Assets/Kitchen/GreenFoodLit.png" id="2_d1d1r"]
@@ -16,6 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://chx2kenbpef2g" path="res://Assets/Kitchen/FridgeLit.png" id="14_x5f6w"]
 [ext_resource type="Texture2D" uid="uid://dgc6n5lkt00dq" path="res://Assets/Kitchen/KnifeUnlit.png" id="15_2aqit"]
 [ext_resource type="Texture2D" uid="uid://bok3wkk4okp55" path="res://Assets/Kitchen/KnifeLit.png" id="16_cmtp6"]
+[ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="17_mmyfm"]
+[ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="18_bma46"]
+[ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="19_8oryo"]
+[ext_resource type="PackedScene" uid="uid://b1js12d12q4f5" path="res://Scenes/LivingRoom.tscn" id="20_4vm47"]
+[ext_resource type="PackedScene" uid="uid://dxupw2liu3sv" path="res://Scenes/DiningRoom.tscn" id="21_us8nq"]
 
 [node name="Kitchen" type="Node2D"]
 
@@ -90,3 +95,24 @@ offset_bottom = 482.0
 scale = Vector2(0.903885, 0.546654)
 texture_normal = ExtResource("15_2aqit")
 texture_hover = ExtResource("16_cmtp6")
+
+[node name="ToLivingRoomButton" type="TextureButton" parent="."]
+offset_left = 11.0
+offset_top = 502.0
+offset_right = 100.0
+offset_bottom = 600.0
+texture_normal = ExtResource("17_mmyfm")
+texture_hover = ExtResource("18_bma46")
+script = ExtResource("19_8oryo")
+target = ExtResource("20_4vm47")
+
+[node name="ToDiningRoomButton" type="TextureButton" parent="."]
+offset_left = 1132.0
+offset_top = 606.0
+offset_right = 1221.0
+offset_bottom = 704.0
+rotation = 3.13901
+texture_normal = ExtResource("17_mmyfm")
+texture_hover = ExtResource("18_bma46")
+script = ExtResource("19_8oryo")
+target = ExtResource("21_us8nq")
