@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dxupw2liu3sv"]
 
-[node name="DiningRoom" type="Node2D"]
+[node name="DiningRoom" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="ToKitchen" type="Button" parent="."]
 offset_left = 32.0

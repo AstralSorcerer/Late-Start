@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Late Start"
-run/main_scene="res://Scenes/LivingRoom.tscn"
+run/main_scene="res://Scenes/Main UI.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 

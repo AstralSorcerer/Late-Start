@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b1js12d12q4f5"]
+[gd_scene load_steps=18 format=3 uid="uid://b1js12d12q4f5"]
 
 [ext_resource type="Texture2D" uid="uid://bnrrv0i4gjjxr" path="res://Assets/LivingRoom/CouchUnlit.png" id="1_tsr7a"]
 [ext_resource type="Texture2D" uid="uid://bfdriaqy7nwgp" path="res://Assets/LivingRoom/Anvil.png" id="2_vfqy0"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://d3t1t307xk3af" path="res://Assets/LivingRoom/BroomHeadLit.png" id="11_80wtj"]
 [ext_resource type="Texture2D" uid="uid://cj2r24bcbo3ik" path="res://Assets/LivingRoom/RopeUnlit.png" id="12_v1edo"]
 [ext_resource type="Texture2D" uid="uid://cflgyg7ltxt2s" path="res://Assets/LivingRoom/RopeLit.png" id="13_0o2g7"]
+[ext_resource type="PackedScene" uid="uid://1jlbtpksiknb" path="res://Scenes/movement_button.tscn" id="16_nnakw"]
+[ext_resource type="PackedScene" uid="uid://dxupw2liu3sv" path="res://Scenes/DiningRoom.tscn" id="17_lp0gd"]
 
 [node name="LivingRoom" type="Control"]
 layout_mode = 3
@@ -96,5 +98,14 @@ texture_normal = ExtResource("10_jndd5")
 texture_hover = ExtResource("11_80wtj")
 script = ExtResource("10_ja3bv")
 id = &"broom head"
+
+[node name="MovementButton" parent="." instance=ExtResource("16_nnakw")]
+layout_mode = 1
+offset_left = 352.0
+offset_top = 168.0
+offset_right = 441.0
+offset_bottom = 266.0
+rotation = 1.57079
+target = ExtResource("17_lp0gd")
 
 [connection signal="pressed" from="Rope" to="Anvil" method="_on_rope_cut"]

@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bcwsjbc68c5pr"]
 
-[node name="Bedroom" type="Node2D"]
+[node name="Bedroom" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="Outlet" type="Button" parent="."]
 offset_left = 205.0
