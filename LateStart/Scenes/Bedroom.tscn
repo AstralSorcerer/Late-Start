@@ -1,10 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcwsjbc68c5pr"]
+[gd_scene load_steps=12 format=3 uid="uid://bcwsjbc68c5pr"]
 
 [ext_resource type="Texture2D" uid="uid://dw64v5c5trj7w" path="res://Assets/BedroomAssets/BedroomBackground.png" id="1_wffaj"]
 [ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="2_ye85m"]
 [ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="3_e51kv"]
 [ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="4_53ncl"]
-[ext_resource type="PackedScene" uid="uid://u7bkmhgntahh" path="res://Scenes/Balcony.tscn" id="5_22wvo"]
 [ext_resource type="Texture2D" uid="uid://cbouo6cnuupeu" path="res://Assets/BedroomAssets/RadioUnlit.png" id="5_su66a"]
 [ext_resource type="Texture2D" uid="uid://5nrsajj374s1" path="res://Assets/BedroomAssets/RadioLit.png" id="6_c77tu"]
 [ext_resource type="Texture2D" uid="uid://cp2huqhgagsuo" path="res://Assets/BedroomAssets/RadioUnplugged.png" id="7_x21s7"]
@@ -33,6 +32,7 @@ rotation = -1.5747
 texture_normal = ExtResource("2_ye85m")
 texture_hover = ExtResource("3_e51kv")
 script = ExtResource("4_53ncl")
+target = "res://Scenes/LivingRoom.tscn"
 
 [node name="ToBalcony" type="TextureButton" parent="."]
 layout_mode = 0
@@ -44,7 +44,7 @@ rotation = -3.13791
 texture_normal = ExtResource("2_ye85m")
 texture_hover = ExtResource("3_e51kv")
 script = ExtResource("4_53ncl")
-target = ExtResource("5_22wvo")
+target = "res://Scenes/Balcony.tscn"
 
 [node name="Radio" type="TextureButton" parent="."]
 layout_mode = 0

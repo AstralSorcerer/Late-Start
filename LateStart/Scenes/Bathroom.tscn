@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://cr6gk5qf6le82"]
+[gd_scene load_steps=15 format=3 uid="uid://cr6gk5qf6le82"]
 
 [ext_resource type="Texture2D" uid="uid://bbjirsk36q6nc" path="res://Assets/Bathroom/BathroomBackground.png" id="1_0s6v6"]
 [ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="2_bmgwa"]
 [ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="3_3u0cf"]
 [ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="4_apdvv"]
-[ext_resource type="PackedScene" uid="uid://b1js12d12q4f5" path="res://Scenes/LivingRoom.tscn" id="5_00vup"]
 [ext_resource type="Texture2D" uid="uid://dbndvfytnln1" path="res://Assets/Bathroom/LighterUnlit.png" id="6_bgrdp"]
 [ext_resource type="Texture2D" uid="uid://27hxlo4y1uls" path="res://Assets/Bathroom/LighterLit.png" id="7_6tp20"]
 [ext_resource type="Script" path="res://Scripts/UI/item_button.gd" id="8_iwvrq"]
@@ -24,7 +23,7 @@ position = Vector2(572, 324)
 scale = Vector2(0.6, 0.61)
 texture = ExtResource("1_0s6v6")
 
-[node name="MovementButton" type="TextureButton" parent="."]
+[node name="ToLivingRoom" type="TextureButton" parent="."]
 offset_left = 417.0
 offset_top = 303.0
 offset_right = 506.0
@@ -33,7 +32,7 @@ rotation = 1.57353
 texture_normal = ExtResource("2_bmgwa")
 texture_hover = ExtResource("3_3u0cf")
 script = ExtResource("4_apdvv")
-target = ExtResource("5_00vup")
+target = "res://Scenes/LivingRoom.tscn"
 
 [node name="Lighter" type="TextureButton" parent="."]
 offset_left = 600.0

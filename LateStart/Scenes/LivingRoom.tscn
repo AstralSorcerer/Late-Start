@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b1js12d12q4f5"]
+[gd_scene load_steps=18 format=3 uid="uid://b1js12d12q4f5"]
 
 [ext_resource type="Texture2D" uid="uid://bnrrv0i4gjjxr" path="res://Assets/LivingRoom/CouchUnlit.png" id="1_tsr7a"]
 [ext_resource type="Texture2D" uid="uid://bfdriaqy7nwgp" path="res://Assets/LivingRoom/Anvil.png" id="2_vfqy0"]
@@ -17,9 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://cflgyg7ltxt2s" path="res://Assets/LivingRoom/RopeLit.png" id="13_0o2g7"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="14_li2f6"]
 [ext_resource type="PackedScene" uid="uid://1jlbtpksiknb" path="res://Scenes/movement_button.tscn" id="16_nnakw"]
-[ext_resource type="PackedScene" uid="uid://bcwsjbc68c5pr" path="res://Scenes/Bedroom.tscn" id="18_4703h"]
-[ext_resource type="PackedScene" uid="uid://cr6gk5qf6le82" path="res://Scenes/Bathroom.tscn" id="19_vlv3w"]
-[ext_resource type="PackedScene" uid="uid://dax2a87cxrspf" path="res://Scenes/Kitchen.tscn" id="20_qbc7j"]
 
 [node name="LivingRoom" type="Control"]
 layout_mode = 3
@@ -110,7 +107,7 @@ offset_top = 168.0
 offset_right = 441.0
 offset_bottom = 266.0
 rotation = 1.57079
-target = ExtResource("18_4703h")
+target = "res://Scenes/Bedroom.tscn"
 
 [node name="ToBathroomButton" parent="." instance=ExtResource("16_nnakw")]
 layout_mode = 1
@@ -119,7 +116,7 @@ offset_top = 348.0
 offset_right = 117.0
 offset_bottom = 446.0
 rotation = 0.00542462
-target = ExtResource("19_vlv3w")
+target = "res://Scenes/Bathroom.tscn"
 
 [node name="ToKitchenButton" parent="." instance=ExtResource("16_nnakw")]
 layout_mode = 1
@@ -128,7 +125,7 @@ offset_top = 356.0
 offset_right = 881.0
 offset_bottom = 454.0
 rotation = 3.14177
-target = ExtResource("20_qbc7j")
+target = "res://Scenes/Kitchen.tscn"
 
 [connection signal="pressed" from="Rope" to="Anvil" method="_on_rope_cut"]
 [connection signal="pressed" from="Drawer" to="Drawer" method="TopDrawer"]

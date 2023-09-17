@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxupw2liu3sv"]
+[gd_scene load_steps=12 format=3 uid="uid://dxupw2liu3sv"]
 
 [ext_resource type="Texture2D" uid="uid://ysxlegansk6h" path="res://Assets/DiningRoom/DiningChair.png" id="1_nnt8d"]
 [ext_resource type="Texture2D" uid="uid://b4mgjvplivw2p" path="res://Assets/DiningRoom/DiningTable.png" id="2_fwchl"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="9_v814t"]
 [ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="10_bj74y"]
 [ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="11_bxom5"]
-[ext_resource type="PackedScene" uid="uid://dax2a87cxrspf" path="res://Scenes/Kitchen.tscn" id="12_1udjs"]
 
 [node name="DiningRoom" type="Control"]
 layout_mode = 3
@@ -66,4 +65,4 @@ rotation = -1.57668
 texture_normal = ExtResource("9_v814t")
 texture_hover = ExtResource("10_bj74y")
 script = ExtResource("11_bxom5")
-target = ExtResource("12_1udjs")
+target = "res://Scenes/Kitchen.tscn"
