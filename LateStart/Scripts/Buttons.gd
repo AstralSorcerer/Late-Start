@@ -1,7 +1,7 @@
 extends TextureButton
 
 func Play():
-	get_tree().change_scene_to_file("res://Scenes/Main_UI.tscn");
+	get_tree().change_scene_to_file("res://Scenes/Main UI.tscn");
 
 func Quit():
 	get_tree().quit();
