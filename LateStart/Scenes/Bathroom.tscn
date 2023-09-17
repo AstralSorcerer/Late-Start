@@ -1,76 +1,32 @@
-[gd_scene load_steps=16 format=3 uid="uid://cr6gk5qf6le82"]
-
-[ext_resource type="Texture2D" uid="uid://bbjirsk36q6nc" path="res://Assets/Bathroom/BathroomBackground.png" id="1_0s6v6"]
-[ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="2_bmgwa"]
-[ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="3_3u0cf"]
-[ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="4_apdvv"]
-[ext_resource type="PackedScene" uid="uid://b1js12d12q4f5" path="res://Scenes/LivingRoom.tscn" id="5_00vup"]
-[ext_resource type="Texture2D" uid="uid://dbndvfytnln1" path="res://Assets/Bathroom/LighterUnlit.png" id="6_bgrdp"]
-[ext_resource type="Texture2D" uid="uid://27hxlo4y1uls" path="res://Assets/Bathroom/LighterLit.png" id="7_6tp20"]
-[ext_resource type="Script" path="res://Scripts/UI/item_button.gd" id="8_iwvrq"]
-[ext_resource type="Texture2D" uid="uid://ihr4vq1xc5bd" path="res://Assets/Bathroom/PistolUnlit.png" id="9_v07qy"]
-[ext_resource type="Texture2D" uid="uid://sq1ur1wavl11" path="res://Assets/Bathroom/PistolLit.png" id="10_32igi"]
-[ext_resource type="Texture2D" uid="uid://dn3fq0a2dpqoj" path="res://Assets/Bathroom/ToiletBrokenUnlit.png" id="11_6hoth"]
-[ext_resource type="Texture2D" uid="uid://bj1e0t4iiv25" path="res://Assets/Bathroom/ToiletBrokenLit.png" id="12_avqdd"]
-[ext_resource type="Texture2D" uid="uid://s7wdi611er" path="res://Assets/Bathroom/ToiletFixed.png" id="13_ptcnb"]
-[ext_resource type="Texture2D" uid="uid://cbu6v46hesy33" path="res://Assets/Bathroom/WetFloorUnlit.png" id="14_ntrt2"]
-[ext_resource type="Texture2D" uid="uid://y36dgl6lv2es" path="res://Assets/Bathroom/WetFloorLit.png" id="15_8t415"]
+[gd_scene format=3 uid="uid://cr6gk5qf6le82"]
 
 [node name="Bathroom" type="Node2D"]
 
-[node name="BathroomBackground" type="Sprite2D" parent="."]
-z_index = -100
-position = Vector2(572, 324)
-scale = Vector2(0.6, 0.61)
-texture = ExtResource("1_0s6v6")
+[node name="Water" type="Button" parent="."]
+offset_left = 389.0
+offset_top = 454.0
+offset_right = 659.0
+offset_bottom = 596.0
+text = "Wet floor that the player mops up"
 
-[node name="MovementButton" type="TextureButton" parent="."]
-offset_left = 417.0
-offset_top = 303.0
-offset_right = 506.0
-offset_bottom = 401.0
-rotation = 1.57353
-texture_normal = ExtResource("2_bmgwa")
-texture_hover = ExtResource("3_3u0cf")
-script = ExtResource("4_apdvv")
-target = ExtResource("5_00vup")
+[node name="Toilet" type="Button" parent="."]
+offset_left = 99.0
+offset_top = 354.0
+offset_right = 267.0
+offset_bottom = 528.0
+text = "Toilet that player
+fixes with wrench"
 
-[node name="Lighter" type="TextureButton" parent="."]
-offset_left = 600.0
-offset_top = 63.0
-offset_right = 705.0
-offset_bottom = 162.0
-scale = Vector2(0.607348, 0.586611)
-texture_normal = ExtResource("6_bgrdp")
-texture_hover = ExtResource("7_6tp20")
-script = ExtResource("8_iwvrq")
+[node name="Lighter" type="Button" parent="."]
+offset_left = 294.0
+offset_top = 195.0
+offset_right = 390.0
+offset_bottom = 241.0
+text = "Lighter"
 
-[node name="Pistol" type="TextureButton" parent="."]
-z_index = 1
-offset_left = 1042.0
-offset_top = 510.0
-offset_right = 1230.0
-offset_bottom = 735.0
-scale = Vector2(0.555461, 0.522768)
-texture_normal = ExtResource("9_v07qy")
-texture_hover = ExtResource("10_32igi")
-script = ExtResource("8_iwvrq")
-
-[node name="Toilet" type="TextureButton" parent="."]
-offset_left = 857.0
-offset_top = 253.0
-offset_right = 1322.0
-offset_bottom = 901.0
-scale = Vector2(0.629762, 0.56649)
-texture_normal = ExtResource("11_6hoth")
-texture_hover = ExtResource("12_avqdd")
-texture_disabled = ExtResource("13_ptcnb")
-
-[node name="WetFloor" type="TextureButton" parent="."]
-offset_left = 346.0
-offset_top = 547.0
-offset_right = 855.0
-offset_bottom = 689.0
-scale = Vector2(0.895775, 0.702311)
-texture_normal = ExtResource("14_ntrt2")
-texture_hover = ExtResource("15_8t415")
+[node name="ToLivingRoom" type="Button" parent="."]
+offset_left = 981.0
+offset_top = 273.0
+offset_right = 1099.0
+offset_bottom = 371.0
+text = "To living room"
