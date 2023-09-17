@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cr6gk5qf6le82"]
+
+[node name="Bathroom" type="Node2D"]
+
+[node name="Water" type="Button" parent="."]
+offset_left = 389.0
+offset_top = 454.0
+offset_right = 659.0
+offset_bottom = 596.0
+text = "Wet floor that the player mops up"
+
+[node name="Toilet" type="Button" parent="."]
+offset_left = 99.0
+offset_top = 354.0
+offset_right = 267.0
+offset_bottom = 528.0
+text = "Toilet that player
+fixes with wrench"
+
+[node name="Lighter" type="Button" parent="."]
+offset_left = 294.0
+offset_top = 195.0
+offset_right = 390.0
+offset_bottom = 241.0
+text = "Lighter"
+
+[node name="ToLivingRoom" type="Button" parent="."]
+offset_left = 981.0
+offset_top = 273.0
+offset_right = 1099.0
+offset_bottom = 371.0
+text = "To living room"

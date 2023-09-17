@@ -1,0 +1,92 @@
+[gd_scene load_steps=17 format=3 uid="uid://dax2a87cxrspf"]
+
+[ext_resource type="Texture2D" uid="uid://bn6ttsnekboju" path="res://Assets/Kitchen/GreenFoodUnlit.png" id="1_loiv2"]
+[ext_resource type="Texture2D" uid="uid://cuy667ngv7c6f" path="res://Assets/Kitchen/GreenFoodLit.png" id="2_d1d1r"]
+[ext_resource type="Texture2D" uid="uid://cy5i7ry5gkjmi" path="res://Assets/Kitchen/RiceUnlit.png" id="3_isjtt"]
+[ext_resource type="Texture2D" uid="uid://gi0j8dc21dt0" path="res://Assets/Kitchen/RiceLit.png" id="4_t4dh3"]
+[ext_resource type="Texture2D" uid="uid://du5q85x556n1s" path="res://Assets/Kitchen/SpaghettiUnlit.png" id="5_lxu5i"]
+[ext_resource type="Texture2D" uid="uid://qixvn8ic3lp7" path="res://Assets/Kitchen/SpaghettiLit.png" id="6_lvkov"]
+[ext_resource type="Texture2D" uid="uid://bpt0qx5k6xehf" path="res://Assets/Kitchen/MeatUnlit.png" id="7_ceucb"]
+[ext_resource type="Texture2D" uid="uid://cirbg4ajn138b" path="res://Assets/Kitchen/MeatLit.png" id="8_nujva"]
+[ext_resource type="Texture2D" uid="uid://w58qoj5qs5u1" path="res://Assets/Kitchen/KitchenBackdrop.png" id="9_in0o8"]
+[ext_resource type="Texture2D" uid="uid://dg0po2u8s7mss" path="res://Assets/Kitchen/TrashUnlit.png" id="10_1clgw"]
+[ext_resource type="Texture2D" uid="uid://b7qc5klchyj6k" path="res://Assets/Kitchen/TrashLit.png" id="11_4wsd6"]
+[ext_resource type="Texture2D" uid="uid://w6b54s7jbmwy" path="res://Assets/Kitchen/Chef.png" id="12_cfyxi"]
+[ext_resource type="Texture2D" uid="uid://bqu6gcb0mscli" path="res://Assets/Kitchen/FridgeUnlit.png" id="13_xn6ab"]
+[ext_resource type="Texture2D" uid="uid://chx2kenbpef2g" path="res://Assets/Kitchen/FridgeLit.png" id="14_x5f6w"]
+[ext_resource type="Texture2D" uid="uid://dgc6n5lkt00dq" path="res://Assets/Kitchen/KnifeUnlit.png" id="15_2aqit"]
+[ext_resource type="Texture2D" uid="uid://bok3wkk4okp55" path="res://Assets/Kitchen/KnifeLit.png" id="16_cmtp6"]
+
+[node name="Kitchen" type="Node2D"]
+
+[node name="Food1" type="TextureButton" parent="."]
+offset_left = 4.0
+offset_top = 330.0
+offset_right = 152.0
+offset_bottom = 430.0
+scale = Vector2(0.759999, 0.88)
+texture_normal = ExtResource("1_loiv2")
+texture_hover = ExtResource("2_d1d1r")
+
+[node name="Food2" type="TextureButton" parent="."]
+offset_left = 121.0
+offset_top = 342.0
+offset_right = 271.0
+offset_bottom = 442.0
+scale = Vector2(0.759999, 0.88)
+texture_normal = ExtResource("3_isjtt")
+texture_hover = ExtResource("4_t4dh3")
+
+[node name="Food3" type="TextureButton" parent="."]
+offset_left = 250.0
+offset_top = 347.0
+offset_right = 398.0
+offset_bottom = 447.0
+scale = Vector2(0.759999, 0.88)
+texture_normal = ExtResource("5_lxu5i")
+texture_hover = ExtResource("6_lvkov")
+
+[node name="Food4" type="TextureButton" parent="."]
+offset_left = 373.0
+offset_top = 339.0
+offset_right = 523.0
+offset_bottom = 439.0
+scale = Vector2(0.759999, 0.88)
+texture_normal = ExtResource("7_ceucb")
+texture_hover = ExtResource("8_nujva")
+
+[node name="KitchenBackdrop" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(574.5, 322.5)
+scale = Vector2(0.799305, 0.707778)
+texture = ExtResource("9_in0o8")
+
+[node name="TrashCan" type="TextureButton" parent="."]
+offset_left = 559.0
+offset_top = 428.0
+offset_right = 830.0
+offset_bottom = 685.0
+texture_normal = ExtResource("10_1clgw")
+texture_hover = ExtResource("11_4wsd6")
+
+[node name="Chef" type="Sprite2D" parent="."]
+position = Vector2(1053, 350)
+texture = ExtResource("12_cfyxi")
+
+[node name="FridgeDoor" type="TextureButton" parent="."]
+offset_left = 846.0
+offset_top = 208.0
+offset_right = 968.0
+offset_bottom = 548.0
+scale = Vector2(0.84, 0.71811)
+texture_normal = ExtResource("13_xn6ab")
+texture_hover = ExtResource("14_x5f6w")
+
+[node name="Knife" type="TextureButton" parent="."]
+offset_left = 485.0
+offset_top = 354.0
+offset_right = 597.0
+offset_bottom = 482.0
+scale = Vector2(0.903885, 0.546654)
+texture_normal = ExtResource("15_2aqit")
+texture_hover = ExtResource("16_cmtp6")

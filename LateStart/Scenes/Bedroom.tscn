@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bcwsjbc68c5pr"]
+
+[node name="Bedroom" type="Node2D"]
+
+[node name="Outlet" type="Button" parent="."]
+offset_left = 205.0
+offset_top = 497.0
+offset_right = 263.0
+offset_bottom = 555.0
+text = "Outlet"
+
+[node name="ToBalcony" type="Button" parent="."]
+offset_left = 1022.0
+offset_top = 263.0
+offset_right = 1114.0
+offset_bottom = 360.0
+text = "To balcony"
+
+[node name="ToLivingRoom" type="Button" parent="."]
+offset_left = 44.0
+offset_top = 263.0
+offset_right = 136.0
+offset_bottom = 360.0
+text = "To living room"

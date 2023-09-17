@@ -1,3 +1,25 @@
 [gd_scene format=3 uid="uid://dxupw2liu3sv"]
 
 [node name="DiningRoom" type="Node2D"]
+
+[node name="ToKitchen" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 289.0
+offset_right = 158.0
+offset_bottom = 383.0
+text = "To Kitchen"
+
+[node name="Pipe" type="Button" parent="."]
+offset_left = 774.0
+offset_top = 5.0
+offset_right = 1145.0
+offset_bottom = 186.0
+text = "Broken pipe you fix with wrench"
+
+[node name="MopHandle" type="Button" parent="."]
+offset_left = 798.0
+offset_top = 388.0
+offset_right = 882.0
+offset_bottom = 569.0
+text = "Mop
+handle"
