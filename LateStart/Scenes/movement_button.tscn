@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://1jlbtpksiknb"]
+
+[ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="1_fhmcx"]
+[ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="2_xldo0"]
+[ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="3_wx0bs"]
+
+[node name="MovementButton" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1063.0
+offset_bottom = -550.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_fhmcx")
+texture_hover = ExtResource("2_xldo0")
+script = ExtResource("3_wx0bs")
