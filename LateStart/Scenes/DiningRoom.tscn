@@ -1,27 +1,69 @@
-[gd_scene format=3 uid="uid://dxupw2liu3sv"]
+[gd_scene load_steps=13 format=3 uid="uid://dxupw2liu3sv"]
+
+[ext_resource type="Texture2D" uid="uid://ysxlegansk6h" path="res://Assets/DiningRoom/DiningChair.png" id="1_nnt8d"]
+[ext_resource type="Texture2D" uid="uid://b4mgjvplivw2p" path="res://Assets/DiningRoom/DiningTable.png" id="2_fwchl"]
+[ext_resource type="Texture2D" uid="uid://byl67px7bmd5q" path="res://Assets/DiningRoom/DiningRoomBackground.png" id="3_fppjq"]
+[ext_resource type="Texture2D" uid="uid://dtr6r57o4414t" path="res://Assets/DiningRoom/MopHandleUnlit.png" id="4_4e1i7"]
+[ext_resource type="Texture2D" uid="uid://ccxgdw5q15rwu" path="res://Assets/DiningRoom/MopHandleLit.png" id="5_2j4yb"]
+[ext_resource type="Script" path="res://Scripts/UI/item_button.gd" id="6_fl30i"]
+[ext_resource type="Texture2D" uid="uid://bsdicg1fvxypg" path="res://Assets/DiningRoom/GasPipeUnlit.png" id="7_6ibhf"]
+[ext_resource type="Texture2D" uid="uid://ca83vdou8x556" path="res://Assets/DiningRoom/GasPipeLit.png" id="8_hvpen"]
+[ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="9_v814t"]
+[ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="10_bj74y"]
+[ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="11_bxom5"]
+[ext_resource type="PackedScene" uid="uid://dax2a87cxrspf" path="res://Scenes/Kitchen.tscn" id="12_1udjs"]
 
 [node name="DiningRoom" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ToKitchen" type="Button" parent="."]
-offset_left = 32.0
-offset_top = 289.0
-offset_right = 158.0
-offset_bottom = 383.0
-text = "To Kitchen"
+[node name="DiningChair" type="Sprite2D" parent="."]
+position = Vector2(788, 450)
+texture = ExtResource("1_nnt8d")
 
-[node name="Pipe" type="Button" parent="."]
-offset_left = 774.0
-offset_top = 5.0
-offset_right = 1145.0
-offset_bottom = 186.0
-text = "Broken pipe you fix with wrench"
+[node name="DiningChair2" type="Sprite2D" parent="."]
+position = Vector2(509, 436)
+scale = Vector2(-1, 1)
+texture = ExtResource("1_nnt8d")
 
-[node name="MopHandle" type="Button" parent="."]
-offset_left = 798.0
-offset_top = 388.0
-offset_right = 882.0
-offset_bottom = 569.0
-text = "Mop
-handle"
+[node name="DiningTable" type="Sprite2D" parent="."]
+position = Vector2(662, 500)
+texture = ExtResource("2_fwchl")
+
+[node name="DiningRoomBackground" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(574, 326)
+scale = Vector2(0.99, 0.84)
+texture = ExtResource("3_fppjq")
+
+[node name="MopHandle" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 200.0
+offset_right = 222.0
+offset_bottom = 693.0
+scale = Vector2(0.887714, 0.895946)
+texture_normal = ExtResource("4_4e1i7")
+texture_hover = ExtResource("5_2j4yb")
+script = ExtResource("6_fl30i")
+
+[node name="Pipe" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1017.0
+offset_top = 512.0
+offset_right = 1120.0
+offset_bottom = 606.0
+texture_normal = ExtResource("7_6ibhf")
+texture_hover = ExtResource("8_hvpen")
+
+[node name="ToKitchenButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 583.0
+offset_top = 633.0
+offset_right = 672.0
+offset_bottom = 731.0
+rotation = -1.57668
+texture_normal = ExtResource("9_v814t")
+texture_hover = ExtResource("10_bj74y")
+script = ExtResource("11_bxom5")
+target = ExtResource("12_1udjs")

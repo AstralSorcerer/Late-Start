@@ -1,26 +1,76 @@
-[gd_scene format=3 uid="uid://bcwsjbc68c5pr"]
+[gd_scene load_steps=13 format=3 uid="uid://bcwsjbc68c5pr"]
+
+[ext_resource type="Texture2D" uid="uid://dw64v5c5trj7w" path="res://Assets/BedroomAssets/BedroomBackground.png" id="1_wffaj"]
+[ext_resource type="Texture2D" uid="uid://cy3er3lh0c7ir" path="res://Assets/UI/MoveArrow.png" id="2_ye85m"]
+[ext_resource type="Texture2D" uid="uid://cnibvik1y41r8" path="res://Assets/UI/MoveArrowHover.png" id="3_e51kv"]
+[ext_resource type="Script" path="res://Scripts/UI/movement_button.gd" id="4_53ncl"]
+[ext_resource type="PackedScene" uid="uid://u7bkmhgntahh" path="res://Scenes/Balcony.tscn" id="5_22wvo"]
+[ext_resource type="Texture2D" uid="uid://cbouo6cnuupeu" path="res://Assets/BedroomAssets/RadioUnlit.png" id="5_su66a"]
+[ext_resource type="Texture2D" uid="uid://5nrsajj374s1" path="res://Assets/BedroomAssets/RadioLit.png" id="6_c77tu"]
+[ext_resource type="Texture2D" uid="uid://cp2huqhgagsuo" path="res://Assets/BedroomAssets/RadioUnplugged.png" id="7_x21s7"]
+[ext_resource type="Texture2D" uid="uid://dus01n6bw8gh4" path="res://Assets/BedroomAssets/Outlet.png" id="8_76xq7"]
+[ext_resource type="Texture2D" uid="uid://hrlu1o0q51n2" path="res://Assets/BedroomAssets/CatUnlit.png" id="9_guwq1"]
+[ext_resource type="Texture2D" uid="uid://pik8yksp0j1d" path="res://Assets/BedroomAssets/FrameUnlit.png" id="10_f6icx"]
+[ext_resource type="Texture2D" uid="uid://oaqa5ko402lp" path="res://Assets/BedroomAssets/Butler.png" id="11_c5toh"]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Outlet" type="Button" parent="."]
-offset_left = 205.0
-offset_top = 497.0
-offset_right = 263.0
-offset_bottom = 555.0
-text = "Outlet"
+[node name="BedroomBackground" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(576, 324)
+scale = Vector2(0.8, 0.72)
+texture = ExtResource("1_wffaj")
 
-[node name="ToBalcony" type="Button" parent="."]
-offset_left = 1022.0
-offset_top = 263.0
-offset_right = 1114.0
-offset_bottom = 360.0
-text = "To balcony"
+[node name="ToLivingRoom" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 557.0
+offset_top = 619.0
+offset_right = 646.0
+offset_bottom = 717.0
+rotation = -1.5747
+texture_normal = ExtResource("2_ye85m")
+texture_hover = ExtResource("3_e51kv")
+script = ExtResource("4_53ncl")
 
-[node name="ToLivingRoom" type="Button" parent="."]
-offset_left = 44.0
-offset_top = 263.0
-offset_right = 136.0
-offset_bottom = 360.0
-text = "To living room"
+[node name="ToBalcony" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1072.0
+offset_top = 353.0
+offset_right = 1161.0
+offset_bottom = 451.0
+rotation = -3.13791
+texture_normal = ExtResource("2_ye85m")
+texture_hover = ExtResource("3_e51kv")
+script = ExtResource("4_53ncl")
+target = ExtResource("5_22wvo")
+
+[node name="Radio" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 381.0
+offset_right = 268.0
+offset_bottom = 553.0
+scale = Vector2(0.759687, 0.761029)
+texture_normal = ExtResource("5_su66a")
+texture_hover = ExtResource("6_c77tu")
+texture_disabled = ExtResource("7_x21s7")
+
+[node name="Outlet" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(30, 407)
+texture = ExtResource("8_76xq7")
+
+[node name="CatUnlit" type="Sprite2D" parent="."]
+position = Vector2(729, 416)
+scale = Vector2(0.818715, 0.762478)
+texture = ExtResource("9_guwq1")
+
+[node name="FrameUnlit" type="Sprite2D" parent="."]
+position = Vector2(867, 353)
+texture = ExtResource("10_f6icx")
+
+[node name="Butler" type="Sprite2D" parent="."]
+position = Vector2(263, 383)
+texture = ExtResource("11_c5toh")
