@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3546vcq8ar41"]
+
+[ext_resource type="Script" path="res://Scripts/UI/inventory.gd" id="1_2wkqf"]
+[ext_resource type="Texture2D" uid="uid://cyjuasjp32lnx" path="res://Assets/LivingRoom/ScissorsUnlit.png" id="2_8nm5j"]
+[ext_resource type="Texture2D" uid="uid://ctmtjv6jbybm7" path="res://Assets/LivingRoom/ScissorsLit.png" id="3_dlmrk"]
+[ext_resource type="Script" path="res://Scripts/UI/inventory_item.gd" id="4_4m62e"]
+[ext_resource type="Texture2D" uid="uid://5xjdjhk8thcf" path="res://Assets/LivingRoom/WrenchUnlit.png" id="5_1jbou"]
+[ext_resource type="Texture2D" uid="uid://c2iif0i6fgyyb" path="res://Assets/LivingRoom/WrenchLit.png" id="6_x6byq"]
+[ext_resource type="Texture2D" uid="uid://bsmusy05pj41v" path="res://Assets/LivingRoom/CandleUnlit.png" id="7_ewhyl"]
+[ext_resource type="Texture2D" uid="uid://buwbmmclidf48" path="res://Assets/LivingRoom/CandleLit.png" id="8_i10d0"]
+
+[node name="Inventory Test" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Inventory" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 192.0
+script = ExtResource("1_2wkqf")
+
+[node name="Scissors" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 224.0
+offset_right = 631.0
+offset_bottom = 347.0
+texture_normal = ExtResource("2_8nm5j")
+texture_hover = ExtResource("3_dlmrk")
+script = ExtResource("4_4m62e")
+id = &"scissors"
+
+[node name="Wrench" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 216.0
+offset_right = 383.0
+offset_bottom = 353.0
+texture_normal = ExtResource("5_1jbou")
+texture_hover = ExtResource("6_x6byq")
+script = ExtResource("4_4m62e")
+id = &"wrench"
+
+[node name="Candle" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 192.0
+offset_right = 500.0
+offset_bottom = 369.0
+texture_normal = ExtResource("7_ewhyl")
+texture_hover = ExtResource("8_i10d0")
+script = ExtResource("4_4m62e")
+id = &"candle"
+
+[node name="Scissors2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 432.0
+offset_right = 807.0
+offset_bottom = 555.0
+texture_normal = ExtResource("2_8nm5j")
+texture_hover = ExtResource("3_dlmrk")
+script = ExtResource("4_4m62e")
+id = &"scissors"
+
+[node name="Wrench2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 424.0
+offset_right = 559.0
+offset_bottom = 561.0
+texture_normal = ExtResource("5_1jbou")
+texture_hover = ExtResource("6_x6byq")
+script = ExtResource("4_4m62e")
+id = &"wrench"
+
+[node name="Candle2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 400.0
+offset_right = 676.0
+offset_bottom = 577.0
+texture_normal = ExtResource("7_ewhyl")
+texture_hover = ExtResource("8_i10d0")
+script = ExtResource("4_4m62e")
+id = &"candle"
