@@ -26,6 +26,11 @@ func _pressed():
 		inventory.add_item(self)
 		
 
+func _process(delta):
+	if (Input.is_action_pressed("Escape")):
+		var ui := get_tree().current_scene as UI
+		ui.held_item = ""
+		Input.set_custom_mouse_cursor(null)
 
 #func _get_drag_data(_at_position: Vector2) -> Variant:
 #	if not _inventory:

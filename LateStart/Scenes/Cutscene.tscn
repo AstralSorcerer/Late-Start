@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://0dohy5kw6g45"]
+
+[ext_resource type="VideoStream" path="res://Videos/OpeningScene.ogv" id="1_amrtb"]
+[ext_resource type="Script" path="res://Scripts/Cutscenes.gd" id="2_25idw"]
+[ext_resource type="VideoStream" path="res://Videos/DealWithDevil_1.ogv" id="2_vcdff"]
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="OpeningScene" type="VideoStreamPlayer" parent="." node_paths=PackedStringArray("secondVideo")]
+visibility_layer = 512
+offset_left = 385.0
+offset_top = 2.0
+offset_right = 737.0
+offset_bottom = 642.0
+scale = Vector2(1.19818, 1.01523)
+stream = ExtResource("1_amrtb")
+autoplay = true
+expand = true
+script = ExtResource("2_25idw")
+secondVideo = NodePath("../DealWithDevil")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -100
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8693, 16.4791)
+color = Color(0, 0, 0, 1)
+
+[node name="DealWithDevil" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.80046, 1.77197)
+stream = ExtResource("2_vcdff")
+paused = true
+script = ExtResource("2_25idw")

@@ -100,31 +100,36 @@ texture_hover = ExtResource("11_80wtj")
 script = ExtResource("10_ja3bv")
 id = &"broom head"
 
-[node name="ToBedroomButton" parent="." instance=ExtResource("16_nnakw")]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ToBedroomButton" parent="CanvasLayer" instance=ExtResource("16_nnakw")]
 offset_left = 352.0
 offset_top = 168.0
 offset_right = 441.0
 offset_bottom = 266.0
 rotation = 1.57079
+scale = Vector2(0.0992266, 0.114845)
+stretch_mode = 5
 target = "res://Scenes/Bedroom.tscn"
 
-[node name="ToBathroomButton" parent="." instance=ExtResource("16_nnakw")]
-layout_mode = 1
+[node name="ToBathroomButton" parent="CanvasLayer" instance=ExtResource("16_nnakw")]
 offset_left = 28.0
 offset_top = 348.0
 offset_right = 117.0
 offset_bottom = 446.0
 rotation = 0.00542462
+scale = Vector2(0.104587, 0.116205)
+stretch_mode = 5
 target = "res://Scenes/Bathroom.tscn"
 
-[node name="ToKitchenButton" parent="." instance=ExtResource("16_nnakw")]
-layout_mode = 1
+[node name="ToKitchenButton" parent="CanvasLayer" instance=ExtResource("16_nnakw")]
 offset_left = 792.0
 offset_top = 356.0
 offset_right = 881.0
 offset_bottom = 454.0
 rotation = 3.14177
+scale = Vector2(0.0840048, 0.103827)
+stretch_mode = 5
 target = "res://Scenes/Kitchen.tscn"
 
 [connection signal="pressed" from="Rope" to="Anvil" method="_on_rope_cut"]

@@ -22,7 +22,7 @@ func _process(delta):
 		processTimer = 0
 		if (label.text.length() == textFinal.length()):
 			textFinished = true
-	if ((Input.is_action_pressed("MouseClick") || Input.is_action_just_released("SpaceBar")) && textFinished):
+	if ((Input.is_action_pressed("MouseClick") || Input.is_action_pressed("SpaceBar")) && textFinished):
 		if (currentTextLine < textLinesGlobal.size() - 1):
 			processTimer = 0
 			currentTextLine += 1

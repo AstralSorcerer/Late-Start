@@ -22,30 +22,6 @@ position = Vector2(576, 324)
 scale = Vector2(0.8, 0.72)
 texture = ExtResource("1_wffaj")
 
-[node name="ToLivingRoom" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 557.0
-offset_top = 619.0
-offset_right = 646.0
-offset_bottom = 717.0
-rotation = -1.5747
-texture_normal = ExtResource("2_ye85m")
-texture_hover = ExtResource("3_e51kv")
-script = ExtResource("4_53ncl")
-target = "res://Scenes/LivingRoom.tscn"
-
-[node name="ToBalcony" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 1072.0
-offset_top = 353.0
-offset_right = 1161.0
-offset_bottom = 451.0
-rotation = -3.13791
-texture_normal = ExtResource("2_ye85m")
-texture_hover = ExtResource("3_e51kv")
-script = ExtResource("4_53ncl")
-target = "res://Scenes/Balcony.tscn"
-
 [node name="Radio" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 20.0
@@ -74,3 +50,27 @@ texture = ExtResource("10_f6icx")
 [node name="Butler" type="Sprite2D" parent="."]
 position = Vector2(263, 383)
 texture = ExtResource("11_c5toh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ToLivingRoom" type="TextureButton" parent="CanvasLayer"]
+offset_left = 557.0
+offset_top = 619.0
+offset_right = 646.0
+offset_bottom = 717.0
+rotation = -1.5747
+texture_normal = ExtResource("2_ye85m")
+texture_hover = ExtResource("3_e51kv")
+script = ExtResource("4_53ncl")
+target = "res://Scenes/LivingRoom.tscn"
+
+[node name="ToBalcony" type="TextureButton" parent="CanvasLayer"]
+offset_left = 1072.0
+offset_top = 353.0
+offset_right = 1161.0
+offset_bottom = 451.0
+rotation = -3.13791
+texture_normal = ExtResource("2_ye85m")
+texture_hover = ExtResource("3_e51kv")
+script = ExtResource("4_53ncl")
+target = "res://Scenes/Balcony.tscn"
